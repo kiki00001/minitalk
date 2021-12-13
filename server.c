@@ -6,7 +6,7 @@
 /*   By: heahn <heahn@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 18:45:16 by heahn             #+#    #+#             */
-/*   Updated: 2021/12/13 20:45:20 by heahn            ###   ########.fr       */
+/*   Updated: 2021/12/13 21:07:47 by heahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ void	handler(int signal)
 	i++;
 	if (i == 8)
 	{
-		if (c == '\0')
-			ft_putchar('\n');
-		else
-			ft_putchar(c);
+		ft_putchar(c);
 		c = 0;
 		i = 0;
 	}
