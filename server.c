@@ -19,6 +19,8 @@ void	handler(int signal)
 
 	if (signal == SIGUSR1)
 		c += 1 << i;
+//		ft_putnbr(c);
+//		write(1,"\n",1); 
 	i++;
 	if (i == 8)
 	{
@@ -42,9 +44,8 @@ int	main(void)
 {
 	struct sigaction	sig;
 
-	sig.sa_flags = SA_SIGINFO;
-	sig.sa_handler = &handler;
-	sigaction(SIGUSR1, &sig, NULL);
+	sig.sa_handler = &handler;	//핸들러 : 인터럽트 발생 시 해당 함수 호출해주는 역할
+	sigaction(SIGUSR1, &sig, NULL);	
 	sigaction(SIGUSR2, &sig, NULL);
 	ft_pid();
 	while (1)
